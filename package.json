@@ -1,0 +1,31 @@
+{
+  "name": "react-theme-engine",
+  "version": "1.0.0",
+  "description": "Simple react theme provider for react applications",
+  "scripts": {
+    "build:dev": "cross-env NEXT_PUBLIC_APP_ENV=development next build",
+    "start": "next start",
+    "lint": "next lint",
+    "clean": "rimraf .next out",
+    "lint:css": "stylelint --config stylelint.css.config.js --allow-empty-input \"src/**/*.(css|scss)\"",
+    "typecheck": "tsc -p ./tsconfig.json",
+    "test": "jest --passWithNoTests"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "rollup": "^3.24.0",
+    "eslint": "8.36.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.32.2",
+    "@types/react": "^16.8.8"
+  },
+  "peerDependencies": {
+    "react": ">=16.3.0"
+  },
+  "main": "index.ts",
+  "repository": "git@github.com:hoductrong/react-theme-engine.git",
+  "author": "Trong Ho <trong.hoduc@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
