@@ -1,6 +1,6 @@
 import { Obj, Theme } from "src/types";
 
-export function flatObject<T extends Theme>(arg: T): Record<string, string> {
+export function flatObject<T extends Object>(arg: T): Record<string, string> {
   const result: Obj<string> = {};
 
   Object.entries(arg).forEach(([key, value]) => {
