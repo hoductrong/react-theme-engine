@@ -1,24 +1,11 @@
 import * as React from 'react';
-import type { ReactNode } from 'react';
 import { setCSSVariables } from './utils/setCSSVariables';
-import { Theme, ThemeName } from './types';
-
-type ThemeProviderProps<T> = {
-  children: ReactNode;
-};
-
-type ThemeContextType<T extends Theme> = {
-  colors: T[ThemeName];
-  currentTheme: keyof T;
-  changeTheme: (themeName: keyof T) => void;
-};
-
-let themeProvider: any = null;
+import { Theme, ThemeContextType, ThemeProviderProps } from './types';
 
 export function createTheme<T extends Theme>(theme: T) {
   const selectedThemeName = Object.keys(theme)[0];
   const themeDefaultValue: ThemeContextType<T> = {
-    colors: theme[selectedThemeName] as T[ThemeName],
+    colors: theme[selectedThemeName] as T[keyof T],
     changeTheme: () => {},
     currentTheme: selectedThemeName,
   };
@@ -38,7 +25,7 @@ export function createTheme<T extends Theme>(theme: T) {
   
     const context = React.useMemo<ThemeContextType<T>>(() => {
       return {
-        colors: theme[currentTheme] as T[ThemeName],
+        colors: theme[currentTheme],
         changeTheme,
         currentTheme,
       };

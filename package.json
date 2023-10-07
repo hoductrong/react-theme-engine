@@ -1,6 +1,6 @@
 {
   "name": "react-theme-engine",
-  "version": "0.3.0-preview.178e20e",
+  "version": "0.3.0-preview.e85ef5c",
   "description": "Simple react theme provider for react applications",
   "main": "./dist/bundle.js",
   "module": "./dist/bundle.esm.js",
