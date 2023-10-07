@@ -9,7 +9,7 @@
 
 - Works in **React**
 - Supports CSS variables
-- Support states via hook
+- Supports states via hook
 - Lightweight react library (~500 bytes)
 - Supports typescript
 
@@ -78,14 +78,15 @@ import { useTheme } from './theme.ts'
 function App() {
   const { currentTheme, changeTheme, colors } = useTheme();
 
-  return <div 
+  return <button 
     style={{ 
       color: colors.color, 
       background: colors.background.color 
     }}
+    onClick={() => changeTheme(currentTheme === 'light' ? 'dark' : 'light')}
     >
-      Hello
-    </div>;
+      Change Theme
+    </button>;
 }
 ```
 
