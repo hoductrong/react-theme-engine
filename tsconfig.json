@@ -2,7 +2,6 @@
   
   "compilerOptions": {
     "noImplicitAny": true,
-    "noEmit": true,
     "target": "ESNext",
     "module": "esnext",
     "jsx": "react",
@@ -11,6 +10,9 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "baseUrl": ".",
+    "declaration": true,
+    "declarationDir": "dist",
+    "noEmit": false
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]

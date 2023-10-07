@@ -1,6 +1,6 @@
 {
   "name": "react-theme-engine",
-  "version": "0.3.0",
+  "version": "0.3.0-preview.178e20e",
   "description": "Simple react theme provider for react applications",
   "main": "./dist/bundle.js",
   "module": "./dist/bundle.esm.js",
@@ -9,6 +9,10 @@
   "repository": "git@github.com:hoductrong/react-theme-engine.git",
   "author": "Trong Ho <trong.hoduc@gmail.com>",
   "license": "MIT",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
   "private": false,
   "scripts": {
     "build": "yarn clean && rollup -c",
